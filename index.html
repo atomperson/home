@@ -2,31 +2,41 @@
 <html lang="en">
 <head>
   <script>
-    var type = location.search ? location.search.split('=')[1] : 1
+    // var type = location.search ? location.search.split('=')[1] : 1
     
-    var appInfo = [
-      {
-        partner: "tpjf",
-        appName: "appName",
-        token: "tongdun" + "-" + new Date().getTime() + "-" + Math.random().toString(16).substr(2),
-        fmb: true,
-        cub: true,
-        fpHost: "https://ecustomer.cntaiping.com/tongdunprofile/h5",
-      },
-      {
+    // var appInfo = [
+    //   {
+    //     partner: "tpjf",
+    //     appName: "appName",
+    //     token: "tongdun" + "-" + new Date().getTime() + "-" + Math.random().toString(16).substr(2),
+    //     fmb: true,
+    //     cub: true,
+    //     fpHost: "https://ecustomer.cntaiping.com/tongdunprofile/h5",
+    //   },
+    //   {
+    //     partner: 'tuhu',
+    //     appName: 'tuhu_xcx',
+    //     env: 'PRODUCTION',
+    //     fpHost: 'https://persona.tuhu.cn/miniProgram/profile.json'
+    //   }
+    // ]
+    
+    // window._fmOpt = Object.assign(appInfo[Number(type) - 1], {
+    //   success: function (data) {
+    //     console.log(data)
+    //     document.body.innerHTML = '<span id="text">' + data + '</span>'
+    //   }
+    // })
+    window._fmOpt = {
         partner: 'tuhu',
         appName: 'tuhu_xcx',
         env: 'PRODUCTION',
-        fpHost: 'https://persona.tuhu.cn/miniProgram/profile.json'
+        fpHost: 'https://persona.tuhu.cn/miniProgram/profile.json',
+        success: function (data) {
+          console.log(data)
+          document.body.innerHTML = '<span id="text">' + data + '</span>'
+        }
       }
-    ]
-    
-    window._fmOpt = Object.assign(appInfo[Number(type) - 1], {
-      success: function (data) {
-        console.log(data)
-        document.body.innerHTML = '<span id="text">' + data + '</span>'
-      }
-    })
   </script>
   <script src="https://ecustomer.cntaiping.com/tongdunprofile/h5/static/fm.js"></script>
 </head>
