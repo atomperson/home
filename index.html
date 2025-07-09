@@ -33,6 +33,12 @@
         document.body.innerHTML = '<span id="text">' + data + '</span>'
       }
     })
+
+    window.changeCode = function() {
+      var code = window._fmOpt.getinfo ? window._fmOpt.getinfo() : null
+      console.log('code', code)
+      document.body.innerHTML = '<span id="text">' + code + '</span>'
+    }
   </script>
   <script src="./fm.js"></script>
 </head>
