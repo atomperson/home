@@ -11337,7 +11337,8 @@
       }
       function o000oO() {
         try {
-          new WebSocket(OOOoOQ[24]);
+          // new WebSocket(OOOoOQ[24]);
+          throw new Error();
         } catch (QOO0Q0) {
           if (OQOo0Q(QOO0Q0[OOOoOQ[962]], OOOoOQ[1068]) || Qoo0OQ(QOO0Q0[OOOoOQ[962]][OOOoOQ[984]](OOOoOQ[1337]), -1)) {
             return OOOoOQ[905];
